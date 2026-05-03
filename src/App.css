@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: "Nunito", sans-serif;
+  transition: all 0.5s ease-in-out;
+}
+
+:root {
+  --color-primary: #f8f9fb;
+  --color-secondary: #111828;
+  --color-third: #202938;
+  --color-fourth: #60a5fa;
+  --color-fifth: #ffffff;
+  --color-black: #000000;
+  --color-border: #313c4e;
+
+  --border-radius-standard: 1rem;
+}
+
+[data-theme="light"] {
+  --color-primary: #111828;
+  --color-secondary: #f9fafc;
+  --color-third: #fff;
+  --color-fourth: #3b82f6;
+  --color-black: #000000;
+  --color-border: #d1d5db;
+  --color-input-bg: #ffffff;
+  --color-input-text: #111828;
+}
+
+body {
+  background-color: var(--color-secondary);
+  margin: 1rem;
+  overflow: hidden;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 1000px var(--color-secondary) inset !important;
+  transition:
+    background-color 5000s ease-in-out 0s,
+    color 5000s ease-in-out 0s;
+}
+
+input,
+input:focus,
+input:not(:placeholder-shown),
+input:-webkit-autofill {
+  color: var(--color-primary) !important;
+  -webkit-text-fill-color: var(--color-primary) !important;
+  caret-color: var(--color-primary) !important;
+}
