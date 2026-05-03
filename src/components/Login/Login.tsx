@@ -23,15 +23,12 @@ export const Login = () => {
 
   const {
     register,
-    handleSubmit,
-    formState: { errors, isSubmitting },
+    formState: { errors },
   } = useForm({
     resolver: yupResolver(loginSchema),
   });
 
-  const onSubmit = (data: any) => {
-    console.log("Dados válidos!", data);
-  };
+
 
   return (
     <>
@@ -60,7 +57,7 @@ export const Login = () => {
             <p id="login-subtitle">Faça login na sua conta</p>
           </div>
 
-          <form onSubmit={handleSubmit(onSubmit)} noValidate id="form">
+          <form noValidate id="form">
             <div className="input-group">
               <label htmlFor="email">E-mail</label>
               <input
@@ -93,9 +90,7 @@ export const Login = () => {
               <a href="#">Esqueceu a senha?</a>
             </div>
 
-            <button type="submit" className="login-btn" disabled={isSubmitting}>
-              {isSubmitting ? "Entrando..." : "Entrar"}
-            </button>
+            
           </form>
 
           <footer id="footer">&copy;Isatec Sistemas & Consultoria</footer>
