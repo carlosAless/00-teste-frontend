@@ -28,8 +28,6 @@ export const Login = () => {
     resolver: yupResolver(loginSchema),
   });
 
-
-
   return (
     <>
       <button
@@ -90,7 +88,9 @@ export const Login = () => {
               <a href="#">Esqueceu a senha?</a>
             </div>
 
-            
+            <button type="submit" className="login-btn">
+              {"Entrar"}
+            </button>
           </form>
 
           <footer id="footer">&copy;Isatec Sistemas & Consultoria</footer>
